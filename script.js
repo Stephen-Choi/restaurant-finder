@@ -42,59 +42,8 @@ app.config(function($routeProvider, $locationProvider) {
 app.controller("MainCtrl", function($scope, $http, $location, $rootScope) {
 	// handle errors
 	$scope.errorMessage = "";
-	$scope.working = "working my ass off";
+	$scope.working = ""
 	$scope.hasResults = false;
-
-	$scope.locationData = [
-		{
-		name: "heel",
-    	address: "hufsu",
-    	phone_number: "place.formatted_phone_number,place.formatted_phone_number",
-    	rating: "place.rating,",
-    	website: "https://stackoverflow.com/questions/31056868/angularjs-location-path-not-reloading-data-of-the-destination-view",
-    	maps: "place.url"
-		},
-		{
-		name: "heel",
-    	address: "place.formatted_address,",
-    	phone_number: "place.formatted_phone_number,",
-    	rating: "place.rating,",
-    	website: "place.website,",
-    	maps: "place.url"
-		},
-		{
-		name: "heel",
-    	address: "place.formatted_address,",
-    	phone_number: "place.formatted_phone_number,",
-    	rating: "place.rating,",
-    	website: "place.website,",
-    	maps: "place.url"
-		},
-		{
-		name: "heel",
-    	address: "hufsu",
-    	phone_number: "place.formatted_phone_number,",
-    	rating: "place.rating,",
-    	website: "place.website,",
-    	maps: "place.url"
-		},
-		{
-		name: "heel",
-    	address: "place.formatted_address,",
-    	phone_number: "place.formatted_phone_number,",
-    	rating: "place.rating,",
-    	website: "place.website,",
-    	maps: "place.url"
-		},
-		{
-		name: "heel",
-    	address: "place.formatted_address,",
-    	phone_number: "place.formatted_phone_number,",
-    	rating: "place.rating,",
-    	website: "place.website,",
-    	maps: "place.url"
-		}
-	];
 
 	// api urls
 	var geoApi = "https://maps.googleapis.com/maps/api/geocode/json?address=";
