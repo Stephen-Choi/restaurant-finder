@@ -1,0 +1,36 @@
+<style type="text/css">
+	body {
+	background: url('images/restaurant1.jpeg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 1000px; 
+	background-size: cover;
+}
+</style>
+
+<div class="restaurant-nav">
+	<h1 id="title-nonsearch">Restaurant Finder</h1>
+	<a href="/search"><div class="nav-elements" id="search">Search </div></a>
+	<div class="nav-elements" id="{{ (activeSaved === 1) ? 'saved-on' : 'saved' }}" ng-click="changeSaved()">Saved</div>
+</div>
+
+<div id="{{ (activeSaved === 1) ? 'showSave' : 'hideSave' }}">
+	<h1 id="saved-title">Restaurants</h1>
+	<br>
+	<div ng-repeat="restaurants in savedRestaurants track by $index">
+		<a href="{{restaurants.website}}"><h1 class="saved-names">{{$index + 1}}. {{restaurants.name}}</h1></a>
+	</div>
+	<div id="randomizer">
+		<h2 id="random-text" ng-click="randomFn()">Random: {{ random }}</h2>
+	</div>
+</div>
+
+<div id="back">
+	<restaurant ng-repeat="restaurantItem in locationData"></restaurant>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>

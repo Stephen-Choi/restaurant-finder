@@ -1,0 +1,9 @@
+<div class="{{ (restaurantItem.name.length < 17) ? 'restaurant-options' : 'restaurant-options-lower' }}">
+	<i class="fa fa-plus-circle" aria-hidden="true" id="add-button" ng-click="saveRestaurant(locationData[$index])"></i>
+	<h1 id="{{ (restaurantItem.name.length < 17) ? 'restaurant-name' : 'restaurant-name-lower' }}">{{ restaurantItem.name }}</h1>
+	<h2 class="restaurant-info">Address: <span class="{{ (restaurantItem.address.length < 65) ? 'restaurant-info' : 'restaurant-info-lower' }}">{{ restaurantItem.address }}</span></h2>
+	<h2 class="restaurant-info">Phone: <span class="{{ (restaurantItem.address.length < 14) ? 'restaurant-info' : 'restaurant-info-lower' }}" id="phone">{{ restaurantItem.phone_number }}</span></h2>
+	<h2 class="restaurant-info">Rating: {{ restaurantItem.rating }} </h2>
+	<h2 class="{{ (restaurantItem.name.length < 25) ? 'restaurant-info' : 'website' }}">Website: <a href="{{ restaurantItem.website }}"> {{ restaurantItem.name }} </a> </h2>
+	<a href="{{ restaurantItem.maps }}"> <div class="maps-btn"> DIRECTIONS </div> </a>
+</div>
