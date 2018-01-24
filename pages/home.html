@@ -13,7 +13,7 @@
 			<input type="text" name="cuisine" placeholder="Cuisine" ng-model="cuisine" class="inputboxes">
 			<br>
 			<input type="submit" class="{{ (hasResults === true) ? 'switch-btn' : 'custom-btn' }}" value="SEARCH RESTAURANTS" ng-click="getPlaceData(zipcode, distance, cuisine)">
-			<a href="/results" class="{{ (hasResults === true) ? 'showResults' : 'noResults' }}"><button class="custom-btn">RESULTS</button></a>
+			<a href="#!results" class="{{ (hasResults === true) ? 'showResults' : 'noResults' }}"><button class="custom-btn">RESULTS</button></a>
 		</form>
 
 		<div id="map"></div>
