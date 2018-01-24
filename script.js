@@ -1,6 +1,6 @@
 var app = angular.module("restaurant", ['ngRoute']); 
 
-app.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider) {
 	$routeProvider
 	.when("/", {
 		templateUrl: "pages/home.html",
@@ -36,7 +36,7 @@ app.config(function($routeProvider, $locationProvider) {
 		redirectTo: "/"
 	});
 
-	$locationProvider.html5Mode(true);
+	// $locationProvider.html5Mode(true);
 });
 
 app.controller("MainCtrl", ['$scope', '$http', '$location', '$rootScope', function($scope, $http, $location, $rootScope) {
