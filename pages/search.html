@@ -1,8 +1,8 @@
 <!-- display search interface / similar to home.html but this one reveals the other functions-->
 <div class="restaurant-nav">
 	<h1 id="title-nonsearch">Restaurant Finder</h1>
-	<a href="/search"><div class="nav-elements" id="search" ">Search </div></a>
-	<div class="nav-elements" id="saved" ng-click="changeSaved()">Saved</div>
+<!-- 	<a href="/search"><div class="nav-elements" id="search" ">Search </div></a>
+	<div class="nav-elements" id="saved" ng-click="changeSaved()">Saved</div> -->
 </div>
 
 <div class="container-fluid" id="centering-div">
@@ -16,7 +16,7 @@
 			<input type="text" name="cuisine" placeholder="Cuisine" ng-model="cuisine" class="inputboxes">
 			<br>
 			<input type="submit" class="{{ (hasResults === true) ? 'switch-btn' : 'custom-btn' }}" value="SEARCH RESTAURANTS" ng-click="getPlaceData(zipcode, distance, cuisine)">
-			<a href="/results" class="{{ (hasResults === true) ? 'showResults' : 'noResults' }}"><button class="custom-btn">RESULTS</button></a>
+			<a href="#!results" class="{{ (hasResults === true) ? 'showResults' : 'noResults' }}"><button class="custom-btn">RESULTS</button></a>
 		</form>
 
 		<div id="map"></div>
