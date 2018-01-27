@@ -8,8 +8,8 @@
 		<h2>{{ errorMessage }}</h2>
 		<br>
 		<form>
-			<input type="text" name="location" placeholder="Location" ng-model="zipcode" class="inputboxes">
-			<input type="number" name="distance" placeholder="Distance (meters)" id="distance" ng-model="distance" class="inputboxes">
+			<input type="text" name="location" placeholder="Location" ng-model="zipcode" class="inputboxes" required>
+			<input type="number" name="distance" placeholder="Distance (meters)" id="distance" ng-model="distance" class="inputboxes" required>
 			<input type="text" name="cuisine" placeholder="Cuisine" ng-model="cuisine" class="inputboxes">
 			<br>
 			<input type="submit" class="{{ (hasResults === true) ? 'switch-btn' : 'custom-btn' }}" value="SEARCH RESTAURANTS" ng-click="getPlaceData(zipcode, distance, cuisine)">
